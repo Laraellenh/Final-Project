@@ -28,7 +28,7 @@ function Auth() {
                   nav.push("/login");
               } else {
                   alert(
-                  "Your must be between 5 and 10 characters"
+                  "Your password must be between 5 and 10 characters"
                   );
               }
               } else {

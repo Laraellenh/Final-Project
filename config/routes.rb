@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   post "/signup", to: "users#create"
   get '/books', to: "books#get_works"
+  # get '/home', to: "users#show"
   # get '/mylist', to: "favorite_books#show"
   # get '/books', to: "books#index"
   # get '/books', to: "books#show"

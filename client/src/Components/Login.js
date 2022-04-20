@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 
-export default function Login({onLogin}) {
+
+export default function Login({handleLogin}) {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
 
@@ -19,7 +20,7 @@ export default function Login({onLogin}) {
         })
           .then((r) => {
             if (r.ok) {
-              r.json().then((user) => onLogin(user));
+              r.json().then((user) => handleLogin(user));
              
             }
           });

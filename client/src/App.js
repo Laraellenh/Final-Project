@@ -52,36 +52,40 @@ function App() {
         .then(data=>{
           
           const titlesArray = data.entries
-          console.log(data.entries)
+          console.log(data?.entries)
           setTitles(data.entries)
          
         })
       
       }, [])
+      if (!user) return <Login error={'please login'} handleLogin={handleLogin} />;
+  //     if (!user)
+  //     {
+  //       return(
+  //        <Switch>
+  //          <Route exact path="/">
+  //           <Login setUser={setUser} user={user} />
+  //          
+  //   </Route>
 
-
+  //        </Switch>
+  //       )
+  //     }
+    
+  //     console.log(user)
      
   return (
     <>
-   
-   
-   <div 
-   style={{ 
-      backgroundImage: `url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5-ksTgjSWk-8FxS2FYw_FCrmir26sfWbgCg&usqp=CAU")` 
-    }}>
-     
-    </div>
   
    <Switch>  
-    <Route exact path="/signup">
-          <Auth/>
-    </Route>
-    <Route exact path="/login">
-          <Login onLogin={handleLogin}  />
-    </Route>
   
-    <Route exact path='/mylist'> <FavoriteList  /> </Route>
+          <Route path="/signup"> <Auth/> </Route>
+    {/* <Route  path="/login">
+          <Login setUser={setUSer} />
+    </Route>  */}
     <Route exact path="/"> <Home setFavesArray={setFavesArray} favesArray={favesArray} titles={titles} user={user}  handleLogOutClick={handleLogOutClick} /></Route>
+    <Route path='/mylist'> <FavoriteList  /> </Route>
+   
     </Switch>
    
    </>

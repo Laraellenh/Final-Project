@@ -45,13 +45,13 @@ function Favorite({f, handleDeleteItem, setFavorites, favorites}) {
 
  
   return (
-    <div> 
+    <div className='.container-1'> 
         
-        <p
+        <p className=".container-1 p"
         //  className='favelist'
          >
-          {f.book.title} 
-        <button onClick={handleMarkAsRead}> {read ?  "Mark as read" : "Mark as unread"} </button> 
+         <h3 className='box-1'>{f.book.title} </h3> 
+        <button className='box-2' onClick={handleMarkAsRead}> {read ?  "Mark as read" : "Mark as unread"} </button> 
         <h1> </h1>
         <h3> {f.note} </h3> 
         {/* <textarea rows={3} onChange={handleChange}> "leave your thoughts on this title" </textarea> */}
