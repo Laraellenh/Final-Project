@@ -46,7 +46,7 @@ export default function Login({handleLogin}) {
       </form>
 
      <h3> Need to sign up? </h3>
-     <Link to= './signup' > Click to sign up</Link>
+     <Link to= '/signup' > Click to sign up</Link>
         </>
   )
 }

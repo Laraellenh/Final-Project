@@ -58,18 +58,16 @@ function App() {
         })
       
       }, [])
-      if (!user) return <Login error={'please login'} handleLogin={handleLogin} />;
-  //     if (!user)
-  //     {
-  //       return(
-  //        <Switch>
-  //          <Route exact path="/">
-  //           <Login setUser={setUser} user={user} />
-  //          
-  //   </Route>
-
-  //        </Switch>
-  //       )
+      if (!user) return(
+        <Switch>
+          <Route exact path= '/login'>
+        <Login error={'please login'} handleLogin={handleLogin} />;
+        </Route>
+    
+   
+       <Route exact path="/signup"> <Auth/> </Route>
+       </Switch>
+        )
   //     }
     
   //     console.log(user)
@@ -79,7 +77,7 @@ function App() {
   
    <Switch>  
   
-          <Route path="/signup"> <Auth/> </Route>
+          
     {/* <Route  path="/login">
           <Login setUser={setUSer} />
     </Route>  */}
